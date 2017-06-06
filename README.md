@@ -56,9 +56,55 @@ We'll handle:
 
 
 
+## Configuration
+
 ### Local
 
-@TODO
+**CSS**
+
+```css
+*>font{
+  name: heading;
+  family: Roboto;
+  fallback: Arial, Helvetica;
+  typefaces: regular local('Roboto-Regular'), bold local;
+}
+```
+
+
+
+**JSON**
+
+```json
+{
+  name: "heading",
+  family: "Roboto",
+  fallback: "Arial, Helvetica",
+  typefaces:[
+    "regular local('Roboto-Regular')",
+    "bold local"
+  ]
+}
+```
+
+
+
+**Yield**
+
+```css
+@font-face{
+  font-family: Roboto Arial Helvetica;
+  font-weight: 400;
+  font-style: normal;
+  
+  src: local('Roboto-Regular');
+}
+
+@font-face{
+  font-family: Roboto Arial Helvetica;
+  font-weight: 600;
+}
+```
 
 
 
@@ -68,7 +114,83 @@ We'll handle:
 
 ### Self hosted
 
-@TODO
+**CSS configuration** 
+
+```css
+*>font{
+  name: heading;
+  family: Roboto;
+  fallback: Arial, Helvetica;
+  typefaces: regular url('/path/to/your/font/Roboto-Regular'), 
+    		bold url('/path/to/your/font/Roboto-Bold');
+}
+```
+
+
+
+**JSON configuration**
+
+```json
+{
+  name: "heading",
+  family: "Roboto",
+  fallback: "Arial, Helvetica",
+  typefaces:[
+    "regular url('/path/to/your/font/Roboto-Regular')",
+    "bold url('/path/to/your/font/Roboto-Regular')"
+  ]
+}
+```
+
+
+
+**Yield**
+
+```css
+@font-face{
+  font-family: Roboto Arial Helvetica;
+  font-weight: 400;
+  font-style: normal;
+  
+  src: local('Roboto-Regular');
+  src: url("Roboto-Regular.eot");
+  src: url("Roboto-Regular.eot?#iefix") format("embedded-opentype"),
+    url("Roboto-Regular.woff") format("woff"),
+    url("Roboto-Regular.ttf") format("truetype"),
+    url("Roboto-Regular.svg") format("svg");
+}
+
+@font-face{
+  font-family: Roboto Arial Helvetica;
+  font-weight: 600;
+  
+  src: local('Roboto-Bold');
+  src: url("Roboto-Bold.eot");
+  src: url("Roboto-Bold.eot?#iefix") format("embedded-opentype"),
+    url("Roboto-Bold.woff") format("woff"),
+    url("Roboto-Bold.ttf") format("truetype"),
+    url("Roboto-Bold.svg") format("svg");
+}
+```
+
+
+
+#### Font Format
+
+Use the `format` property.
+
+```css
+*>font{
+  name: heading;
+  family: Roboto;
+  fallback: Arial, Helvetica;
+  format: eot, woff, ttf, svg;
+  typefaces: regular url('/path/to/your/font/Roboto-Regular'), 
+    		bold url('/path/to/your/font/Roboto-Bold');
+}
+```
+
+
 
 
 
