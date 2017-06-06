@@ -1,82 +1,91 @@
-[WIP] Salt - Typography Importer
+# [WIP] Salt - Typography Importer
 
-Declare and import your fonts automatically. This plugin is part of Salt, a collection of tool to help you enforce a set of rule througout your application.
+> Declare and import your fonts automatically. This plugin is part of [Salt](https://github.com/alexandremasy/salt), a collection of tool to help you enforce a set of rule througout your application.
 
 
 
-Getting started
+## Getting started
 
 Installation is as easy as:
 
-    npm install postcss-salt-typography-importer
+```shell
+npm install postcss-salt-typography-importer
+```
 
 
 
-PostCSS
+**PostCSS**
 
 Include the plugin in you build process:
 
-    @TODO
+```
+@TODO
 
-Gulp
+```
+
+**Gulp**
 
 Include the plugin in your build process:
 
-    @TODO
+```
+@TODO
+```
 
 
 
 This plugins depends on :
 
-- PostCSS
+- [PostCSS](https://github.com/postcss/postcss)
 
 
 
-Functionalities
 
-Once your have provided your font definition, we'll generate the appropriate @font-face rules.
+
+## Functionalities
+
+Once your have provided your [font definition](https://github.com/alexandremasy/postcss-salt-typography#configuration), we'll generate the appropriate @font-face rules.
 
 We'll handle:
 
-- Local fonts: Font from the local system of the user;
-- Hosted font: Self hosted from your own server;
-- Google Font
-- Adobe Typekit
+- [Local fonts](#local): Font from the local system of the user;
+- [Hosted font](#self-hosted): Self hosted from your own server;
+- [Google Font](#google-font)
+- [Adobe Typekit](#adobe-typekit)
 
----
-
-
-
-Local
-
-@TODO
+------
 
 
 
----
-
-
-
-Self hosted
+### Local
 
 @TODO
 
 
 
----
+------
 
 
 
-Google Font
+### Self hosted
 
 @TODO
 
 
 
----
+------
 
 
 
-Adobe Typekit
+### Google Font
+
+@TODO
+
+
+
+------
+
+
+
+### Adobe Typekit
 
 @TODO
